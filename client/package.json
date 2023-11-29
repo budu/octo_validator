@@ -21,7 +21,7 @@
     "yup": "^0.32.11"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "PORT=3002 react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
@@ -60,5 +60,5 @@
     "lint-staged": "^13.0.3",
     "prettier": "^2.7.1"
   },
-  "proxy": "http://localhost:3000"
+  "proxy": "http://localhost:3002"
 }

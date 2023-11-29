@@ -1,1 +1,1 @@
-export const BaseUrl = 'https://octo-validator-server-kqgu4mta6q-uc.a.run.app/validate'
+export const BaseUrl = 'http://localhost:3001/validate'
