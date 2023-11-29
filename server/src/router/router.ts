@@ -4,11 +4,9 @@ import { Context } from '../services/validation/context/Context';
 import { validationConfigSchema, ValidationEndpoint } from '../schemas/Validation';
 import { ValidationController } from '../services/validation/Controller';
 import { OctoError, BadRequestError, InternalServerError } from '../models/Error';
-import { SupabaseLogger } from '../services/logging/Logger';
 import { ValidationError } from "yup";
 
 export const router = new Router();
-const logger = new SupabaseLogger();
 
 router
   .post("/validate", async (ctx: Koa.Context) => {
@@ -41,6 +39,4 @@ router
         ctx.response.status = error.status;
       }
     }
-
-    logger.logRequest(ctx.request, ctx.response, context);
   });
